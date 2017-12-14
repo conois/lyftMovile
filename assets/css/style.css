@@ -195,3 +195,99 @@ a.button2:hover {
 #codigo{
 	margin-top: 2em;
 }
+
+#btn-ok{
+	width: 8em;
+	background: white;
+	color: #1e1636;
+  box-shadow: #1e1636 0 0px 0px 2px inset;
+}
+
+/*Vista verificacion*/
+
+.verify{
+	margin-left: 3em; 
+	padding-left: 2em;
+	font-family: 'Barlow', sans-serif;
+	color: #1e1636;
+}
+
+#codigo-input{
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	border-bottom: 2px solid #1e1636;
+	width: 2.3em;
+}
+#codigo-input:focus{
+	outline: none;
+	color: #1e1636; 
+	font-size: 1.3em;
+}
+
+.lablab{
+	display: inline-block;
+	font-size: 1.3em;
+}
+
+.verify-codigo{
+	font-family: 'Barlow', sans-serif;
+	color: #1e1636;
+	font-size: 1.2em;
+}
+
+.resend{
+	margin-top: 1.5em;
+	font-family: 'Barlow', sans-serif;
+	color: #1e1636;
+	font-size: 1em;
+}
+
+.resend button{
+	margin-top: 1em;
+}
+
+.btn-ok{
+	width: 8em;
+	background: white;
+	color: #1e1636;
+  box-shadow: #1e1636 0 0px 0px 2px inset;
+}
+
+.boxNext{
+	margin-top: 5em;
+}
+
+/*Vista Formulario */
+
+.formuView{
+	font-family: 'Barlow', sans-serif;
+	color: #1e1636;
+}
+
+.terms{
+	text-decoration: none;
+	display: inline;
+	padding-left: 0px;
+}
+
+/*Vista final*/
+
+.finalView{
+	font-family: 'Barlow', sans-serif;
+	color: #1e1636;
+}
+
+.final{
+	height: 100vh;
+	background: linear-gradient(-210deg, #530060, #E60A89);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow:hidden;
+}
+
+.finally{
+	color: #fff;
+	font-size: 2em;
+}

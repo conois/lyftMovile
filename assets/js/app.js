@@ -1,11 +1,11 @@
 $(document).ready(function(){
 	$(".views").hide(); 
 	setTimeout(function() {
-        $(".first").fadeOut(1000, "swing" ,function(){
+        $(".first").fadeOut(100, "swing" ,function(){
         	$(".second").show()
         	$(".allLogos").show()
         	$(".allLogos").css({'display':'flex'})});
-    },500); 
+    },100); 
 
 	$(".button2").click(function(){
 		console.log("click");
@@ -27,6 +27,9 @@ $(document).ready(function(){
 		var largeNum= cantNum.length +1 ; 
 	if (largeNum == 10){
 		$("button#btn-next").removeAttr("disabled");
+	}else{
+		$("button#btn-next").attr("disabled", "disabled");
+
 	}
 		
 	});
@@ -34,12 +37,46 @@ $(document).ready(function(){
 	/*Crear codigo*/
 	$("button#btn-next").click(function(){
 		console.log("clickNext")
-		$("div#codigo").append("<div class='panel panel-default'><div class='panel-heading'>Tu codigo Lab: </div><div class='panel-body'>LAB-232</div></div><button id='btn-ok' class='btn btn-group btn-lg btn-primary'>Ok</button>")
+		var code = "";
+ 	 	var str = "123456789";
+  	for (var i = 0; i < 3; i++) {
+  	code += str.charAt(Math.floor(Math.random() * str.length))}; 
+		$("div#codigo").append("<div class='panel panel-default'><div class='panel-heading'>Tu codigo Lab: </div><div class='panel-body'>LAB-"+ code + "</div></div><button id='btn-ok' class='btn btn-group btn-lg'>Ok</button>")
+	}); 
 
+	/*Evento a boton ok */
+	$(document).on("click", "#btn-ok", function(){
+		$(".views").hide();
+		$(".verifyView").show();
+	}); 
 
-	})
+	/*Habilitar btn next en verify*/
 
+	$("#codigo-input").keypress(function(){
+		var cantInput = $(this).val(); 
+		var largeNum= cantInput.length+1 ; 
+		if (largeNum == 3){
+		$("button#btn-next-verify").removeAttr("disabled");
+	}
+	});
+
+	$("button#btn-next-verify").click(function(){
+		$(".views").hide();
+		$(".formuView").show();
+	});
 	
+ $('#fancy-checkbox-danger-custom-icons').click(function() {
+      if ($(this).is(':checked')) {
+          $('#btn-check').removeAttr('disabled');
+      } else {
+          $('#btn-check').attr('disabled', 'disabled');
+      }
+ });        
+
+$("button#btn-check").click(function(){
+		$(".views").hide();
+		$(".finalView").show();
+	});
 
 });
 
