@@ -78,5 +78,22 @@ $("button#btn-check").click(function(){
 		$(".finalView").show();
 	});
 
+/*Botones atras*/
+$("button.btn-back-uno").click(function(){
+	$(".views").hide();
+	$(".second").show(); 
+	$(".allLogos").show(); 
+})
+
+$("button.btn-back-dos").click(function(){
+	$(".views").hide();
+	$(".third").show(); 
+})
+
+$("button.btn-back-tres").click(function(){
+	$(".views").hide();
+	$(".verifyView").show(); 
+})
+
 });
 
