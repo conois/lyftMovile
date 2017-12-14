@@ -1,11 +1,11 @@
 $(document).ready(function(){
 	$(".views").hide(); 
 	setTimeout(function() {
-        $(".first").fadeOut(100, "swing" ,function(){
+        $(".first").fadeOut(2000, "swing" ,function(){
         	$(".second").show()
         	$(".allLogos").show()
         	$(".allLogos").css({'display':'flex'})});
-    },100); 
+    },2000); 
 
 	$(".button2").click(function(){
 		console.log("click");
